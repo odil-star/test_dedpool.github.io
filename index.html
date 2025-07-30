@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор Дэдпула</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculator">
+    <input type="text" class="display" id="display" disabled>
+    <div class="buttons">
+        <button onclick="playClick(); clearDisplay()">C</button>
+        <button onclick="playClick(); appendToDisplay('(')">(</button>
+        <button onclick="playClick(); appendToDisplay(')')">)</button>
+        <button onclick="playClick(); appendToDisplay('/')">÷</button>
+
+        <button onclick="playClick(); appendToDisplay('7')">7</button>
+        <button onclick="playClick(); appendToDisplay('8')">8</button>
+        <button onclick="playClick(); appendToDisplay('9')">9</button>
+        <button onclick="playClick(); appendToDisplay('*')">×</button>
+
+        <button onclick="playClick(); appendToDisplay('4')">4</button>
+        <button onclick="playClick(); appendToDisplay('5')">5</button>
+        <button onclick="playClick(); appendToDisplay('6')">6</button>
+        <button onclick="playClick(); appendToDisplay('-')">−</button>
+
+        <button onclick="playClick(); appendToDisplay('1')">1</button>
+        <button onclick="playClick(); appendToDisplay('2')">2</button>
+        <button onclick="playClick(); appendToDisplay('3')">3</button>
+        <button onclick="playClick(); appendToDisplay('+')">+</button>
+
+        <button class="zero" onclick="playClick(); appendToDisplay('0')">0</button>
+        <button onclick="playClick(); appendToDisplay('.')">.</button>
+        <button onclick="playClick(); calculate()">=</button>
+    </div>
+</div>
+
+<!-- 🔊 Звук -->
+<audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+<!-- 📦 Подключение внешнего JS -->
+<script src="script.js"></script>
+</body>
+</html>
